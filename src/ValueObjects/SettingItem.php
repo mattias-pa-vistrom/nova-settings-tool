@@ -2,6 +2,9 @@
 
 namespace WesLal\NovaSettingsTool\ValueObjects;
 
+use Illuminate\Contracts\Container\Container;
+use Illuminate\Support\Str;
+use JsonSerializable;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Code;
 use Laravel\Nova\Fields\Date;
@@ -12,8 +15,6 @@ use Laravel\Nova\Fields\Password;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 use Serializable;
-use JsonSerializable;
-use Illuminate\Contracts\Container\Container;
 use WesLal\NovaSettingsTool\Entities\SettingValue;
 use WesLal\NovaSettingsTool\Enums\SettingType;
 use WesLal\NovaSettingsTool\Exceptions\SettingTypeNotValidException;
@@ -334,7 +335,7 @@ final class SettingItem implements Serializable, JsonSerializable
      */
     private function getNameUsingKey() : string
     {
-        return title_case(str_replace('_', ' ',snake_case($this->getKey())));
+        return title_case(str_replace('_', ' ', Str::snake($this->getKey())));
     }
 
     /**

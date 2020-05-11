@@ -1,5 +1,5 @@
 {
-    "name": "weslal/nova-settings-tool",
+    "name": "mattias-pa-vistrom/nova-settings-tool",
     "description": "A Laravel Nova Tool to let users manage global settings created from code.",
     "keywords": [
         "laravel",
@@ -21,6 +21,11 @@
         {
             "name": "WesLal",
             "email": "weslal@protonmail.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Mattias Eriksson",
+            "email": "mattias@vistrom.se",
             "role": "Developer"
         }
     ],
