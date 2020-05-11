@@ -335,7 +335,7 @@ final class SettingItem implements Serializable, JsonSerializable
      */
     private function getNameUsingKey() : string
     {
-        return title_case(str_replace('_', ' ', Str::snake($this->getKey())));
+        return Str::title(str_replace('_', ' ', Str::snake($this->getKey())));
     }
 
     /**
